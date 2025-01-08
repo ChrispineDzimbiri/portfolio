@@ -1,0 +1,312 @@
+body {
+    font-family: 'montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+}
+.account-circle {
+    width: 50px;
+    height: 50px;
+    background-color: #00aaff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.account-circle h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #fff;
+    font-family: Poppins, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #fff;
+}
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+header nav a {
+    position: relative;
+    margin-left: 20px;
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+header nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #00aaff;
+    transition: width 0.4s ease;
+}
+
+header nav a:hover {
+    color: #00aaff;
+}
+
+header nav a:hover::after {
+    width: 100%;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 60px 40px;
+    background-color: #fff;
+}
+.hero-text {
+    flex: 1;
+}
+.hero-text h2 {
+    font-size: 48px;
+    margin: 0;
+}
+.hero-text p {
+    font-size: 18px;
+    color: #666;
+}
+.hero-text button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #00aaff;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition:  0.3s ease;
+}
+.hero-text button:hover{
+    background-color: #00cbff;
+}
+.hero-text button:active{
+    background-color: #0dacd4;
+}
+.hero-text .clients {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.hero-text .clients img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.hero-text .clients span {
+    font-size: 16px;
+    color: #666;
+}
+.hero-image {
+    flex: 1;
+    text-align: right;
+}
+.hero-image img {
+    width: 80%;
+    border-radius: 10px;
+}
+.services {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    background: linear-gradient(to right, #79dcff, #79dcff, #d7f066);
+    color: #fff;
+}
+
+.services div {
+    text-align: center;
+}
+.services div i {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+
+.about {
+    padding: 60px 40px;
+    background-color: #fff;
+}
+.about h3 {
+    font-size: 32px;
+    margin: 0 0 20px 0;
+}
+.about p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+}
+.about .social-icons {
+    margin-top: 20px;
+}
+.about .social-icons a {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #666;
+    text-decoration: none;
+}
+.projects {
+    padding: 60px 40px;
+    background-color: #fff;
+}
+.projects h3 {
+    font-size: 32px;
+    margin: 0 0 20px 0;
+}
+.projects .project-list {
+    display: flex;
+    justify-content: space-between;
+}
+.projects .project-item {
+    width: 30%;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+.projects .project-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+.projects .project-item h4 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+.projects .project-item p {
+    font-size: 16px;
+    color: #666;
+}
+.companies {
+    padding: 60px 40px;
+    background-color: #fff;
+    text-align: center;
+}
+.companies h3 {
+    font-size: 32px;
+    margin: 0 0 20px 0;
+}
+.companies .company-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.companies .company-logos img {
+    width: 100px;
+    margin: 10px;
+}
+.cta {
+    padding: 60px 40px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+.cta h3 {
+    font-size: 32px;
+    margin: 0 0 20px 0;
+}
+.cta button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #00aaff;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: ease 0.3s;
+}
+.cta button:hover{
+    background-color: #00cbff;
+}
+.cta button:active{
+    background-color: #0dacd4;
+}
+
+footer {
+    padding: 40px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+footer .footer-section {
+    width: 30%;
+}
+footer .footer-section h4 {
+    font-size: 20px;
+    margin: 0 0 10px 0;
+}
+footer .footer-section p,
+footer .footer-section a {
+    font-size: 16px;
+    color: #666;
+    text-decoration: none;
+}
+footer .footer-section a {
+    display: block;
+    margin: 5px 0;
+}
+footer .footer-section .subscribe {
+    display: flex;
+    align-items: center;
+}
+footer .footer-section .subscribe input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+footer .footer-section .subscribe button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #00aaff;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: ease 0.3s;
+}
+footer .footer-section .subscribe button:hover{
+    background-color: #00cbff;
+}
+footer .footer-section .subscribe button:active{
+    background-color: #0dacd4;
+}
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-image {
+        margin-top: 20px;
+    }
+    .projects .project-list {
+        flex-direction: column;
+    }
+    .projects .project-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    footer .footer-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
