@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <header>
         <div class="account-circle">
@@ -15,17 +16,17 @@
         </div>
 
         <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Works</a>
-            <a href="#">Contact</a>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#works">Works</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
-    <section class="hero">
+    <section id="#home" class="hero">
         <div class="hero-text">
             <h2>Hello! I'm Chrispine <br>Dzimbiri</h2>
             <p>A full-stack programmer and ICT student at Daeyang University, passionate about creating innovative and user-friendly tech solutions.</p>
-            <button>Hire Me!</button>
+            <button onclick="window.location.href='mailto:chrispinedzimbiri@gmail.com?subject=Hire Inquiry'">Hire Me!</button>
             <div class="clients">
                 <img src="assets/imgs/c1.png" alt="Client 1">
                 <img src="assets/imgs/c2.png" alt="Client 2">
@@ -37,7 +38,7 @@
             <img src="assets/imgs/me.png" alt="Chrispine">
         </div>
     </section>
-    <section class="services">
+    <section id="" class="services">
         <div>
          <i class="fas fa-paint-brush">
          </i>
@@ -61,7 +62,7 @@
         </div>
        </section>
      
-    <section class="about">
+    <section id="about" class="about">
         <h3>I enjoy crafting innovative and efficient solutions that blend functionality with aesthetics.</h3>
         <p>As a full-stack programmer and ICT student, I focus on designing and developing systems that are user-friendly, reliable, and impactful. My experience spans creating intuitive web designs, robust backend systems, and AI-powered platforms that address real-world challenges.</p>
         <p>I have worked on diverse projects, including job-seeking platforms, mental health websites, e-commerce solutions, and smart public transport system, building a strong foundation in understanding user needs and delivering effective results.</p>
@@ -73,7 +74,7 @@
             <a href="https://www.linkedin.com/in/chrispine-dzimbiri-9707232a4/"><i class="fab fa-linkedin"></i></a>
         </div>
     </section>
-    <section class="projects">
+    <section id="works" class="projects">
         <h3>Latest Projects</h3>
         <div class="project-list">
             <div class="project-item">
@@ -102,9 +103,12 @@
 
         </div>
     </section>
-    <section class="cta">
+    <section id="Contact" class="cta">
         <h3>See the impact of good, conversion-oriented design on your business.</h3>
-        <button>Hire Me!</button>
+        <div class="hero-text">
+            <button onclick="window.location.href='mailto:chrispinedzimbiri@gmail.com?subject=Hire Inquiry'">Hire Me!</button>
+
+        </div>
     </section>
     <footer>
         <div class="footer-section">
@@ -150,5 +154,47 @@
             </div>
         </div>
     </footer>
+
+    <!-- Popup Overlay -->
+<div id="hire-popup" class="popup-overlay">
+  <div class="popup-content">
+    <h3>Hire Me</h3>
+    <form id="hireForm" method="POST" action="mailto:chrispinedzimbiri@gmail.com" enctype="text/plain">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="Name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="Email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="Message" required></textarea>
+
+      <div class="form-buttons">
+        <button type="submit">Send</button>
+        <button type="button" onclick="closePopup()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+<script>
+    const popup = document.getElementById("hire-popup");
+    const hireButtons = document.querySelectorAll(".hero-text button");
+
+    hireButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            popup.style.display = "flex";
+        });
+    });
+
+    function closePopup() {
+        popup.style.display = "none";
+    }
+
+
+    document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") closePopup();
+    });
+</script>
+
 </body>
 </html>
